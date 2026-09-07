@@ -39,7 +39,7 @@
         .logo img {
             max-width: 100%;
             height: auto;
-            width: 300px;
+            width: 150px;
             display: block;
             margin: 0 auto;
         }
@@ -79,8 +79,42 @@
 
             h1 { font-size: 24px; }
             p { font-size: 16px; }
-            .logo img { width: 260px; }
+            .logo img { width: 130px; }
         }
+    
+        /* BotPress: immer als schwebender Button unten rechts */
+        .bpFabWrapper {
+            position: fixed !important;
+            right: 20px !important;
+            bottom: 20px !important;
+            left: auto !important;
+            top: auto !important;
+            z-index: 2147483647 !important;
+        }
+
+        /* Geöffnetes Chatfenster ebenfalls rechts */
+        .bpWebchat {
+            position: fixed !important;
+            right: 20px !important;
+            bottom: 90px !important;
+            left: auto !important;
+            top: auto !important;
+            z-index: 2147483646 !important;
+        }
+
+        @media (max-width: 600px) {
+            .bpFabWrapper {
+                right: 15px !important;
+                bottom: 15px !important;
+            }
+
+            .bpWebchat {
+                right: 15px !important;
+                bottom: 80px !important;
+                max-width: calc(100vw - 30px) !important;
+            }
+        }
+
     </style>
 </head>
 
